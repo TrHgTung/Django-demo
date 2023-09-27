@@ -73,8 +73,10 @@
     </nav>
 
     <div class="container">
-      <h2 class="text-center fw-bold mt-5 ">Trình quản lý kho</h2>
-      <p class="text-center fw-light ">Công cụ quản lý sách "hơi" chuyên nghiệp</p>
+      <h2 class="text-center fw-bold mt-5">Trình quản lý kho sách</h2>
+      <p class="text-center fw-light">
+        Công cụ quản lý sách "hơi" chuyên nghiệp
+      </p>
     </div>
 
     <div class="container mt-3 bg-light">
@@ -147,6 +149,20 @@
         </div>
         <div class="col-md-8">
           <h4 class="text-center fw-bold mt-2">Hiển thị thông tin sách</h4>
+          {% for message in messages %}
+          <div
+            class="alert alert-{{message.tags}} alert-dismissible fade show"
+            role="alert"
+          >
+            <strong>{{message}}</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+          {% endfor %}
           <table class="table">
             <thead>
               <tr>
@@ -169,8 +185,16 @@
                 <td>{{d.date}}</td>
                 <td>{{d.provider}}</td>
                 <td>{{d.category}}</td>
-                <td><a href="/update/{{d.id}}" class="btn btn-outline-success" >Sửa</a></td>
-                <td><a href="/delete/{{d.id}}" class="btn btn-outline-danger">Xóa</a></td>
+                <td>
+                  <a href="/update/{{d.id}}" class="btn btn-outline-success"
+                    >Sửa</a
+                  >
+                </td>
+                <td>
+                  <a href="/delete/{{d.id}}" class="btn btn-outline-danger"
+                    >Xóa</a
+                  >
+                </td>
               </tr>
               {% endfor %}
             </tbody>
