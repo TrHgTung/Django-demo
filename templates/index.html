@@ -18,7 +18,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">NEKO Project</a>
+        <a class="navbar-brand" href="/"><b>NEKO Project</b></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,41 +33,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a
+                class="nav-link"
+                href="https://github.com/TrHgTung/Django-demo"
+                target="_blank"
+                >Mã nguồn</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="/about">Giới thiệu</a></li>
-              </ul>
+              <a class="nav-link" href="/about">Giới thiệu</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          <a
+            href="https://vi.wikipedia.org/wiki/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh"
+            target="_blank"
+            ><img
+              src="https://upload.wikimedia.org/wikipedia/vi/5/59/Logo_HCMUP.png"
+              width="100px"
+          /></a>
         </div>
       </div>
     </nav>
@@ -121,17 +104,17 @@
               />
             </div>
 
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-6">
               <label for="provider">Chọn NXB sách:</label>
               <select name="provider" id="provider" class="form-control">
-                <option selected>--- Chọn 1 NXB ---</option>
+                <option selected>--- Chọn 1 nhà xuất bản ---</option>
                 <option value="KimDong">NXB Kim Đồng</option>
                 <option value="GiaoDuc">NXB Giáo Dục</option>
                 <option value="Tre">NXB Trẻ</option>
               </select>
             </div>
 
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-6">
               <label for="category">Chọn danh mục sách:</label>
               <select name="category" id="category" class="form-control">
                 <option selected>--- Chọn 1 danh mục ---</option>
@@ -144,7 +127,9 @@
               </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Thêm sách</button>
+            <button type="submit" class="btn btn-primary mt-4 text-center">
+              Thêm sản phẩm này
+            </button>
           </form>
         </div>
         <div class="col-md-8">
@@ -172,8 +157,8 @@
                 <th scope="col">Ngày xuất bản</th>
                 <th scope="col">Nhà xuất bản</th>
                 <th scope="col">Danh mục</th>
-                <th scope="col">Sửa</th>
-                <th scope="col">Xóa</th>
+                <th scope="col">Thao tác sửa</th>
+                <th scope="col">Thao tác xóa</th>
               </tr>
             </thead>
             <tbody>

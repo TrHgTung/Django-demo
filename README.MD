@@ -20,6 +20,6 @@
 - Python: 3.10.9
 - Django: 4.2.5
 
-### Tạo super-user trong /admin:
+### Tạo super-user trong /admin (để quản lý dữ liệu):
 
 - `python manage.py createsuperuser` > Nhập theo hướng dẫn > Ghi nhớ username (uname) và password (pwd) > Truy cập `localhost:<số-port>\admin` > Đăng nhập vào trang admin bằng uname và pwd
