@@ -21,14 +21,15 @@ def insertData(request):
     return HttpResponseRedirect('/')
 
 def updateData(request,id):
-    data = Book.objects.all()
-    context = {"data" : data}
-    return render(request,"update.html",context)
+    d = Book.objects.get(id=id)
+    context = {"d" : d}
+    return render(request,"edit.html",context)
 
 def deleteData(request,id):
     data = Book.objects.all()
     context = {"data" : data}
     return render(request,"index.html",context)
+    # return HttpResponseRedirect('/')
 
 def about(request):
     return render(request,"about.html")
