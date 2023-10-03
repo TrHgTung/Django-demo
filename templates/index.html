@@ -132,7 +132,7 @@
             </button>
           </form>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8" id="printable_div_id">
           <h4 class="text-center fw-bold mt-2">Hiển thị thông tin sách</h4>
           {% for message in messages %}
           <div
@@ -186,6 +186,22 @@
           </table>
         </div>
       </div>
+    </div>
+    <div class="text-center">
+      <button class="text-center btn btn-primary" onClick="printdiv('printable_div_id');">In danh sách</button>
+
+      <script>
+        function printdiv(elem) {
+          var header_str = '<html><head><title>' + document.title  + '</title></head><body>';
+          var footer_str = '</body></html>';
+          var new_str = document.getElementById(elem).innerHTML;
+          var old_str = document.body.innerHTML;
+          document.body.innerHTML = header_str + new_str + footer_str;
+          window.print();
+          document.body.innerHTML = old_str;
+          return false;
+        }
+        </script>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
